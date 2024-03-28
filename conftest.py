@@ -1,7 +1,7 @@
 import pytest
 from selenium import webdriver
 
-from data import MAIN_PAGE_REF, DZEN_PAGE_REF
+from data import MAIN_PAGE_REF
 from pages.header_page import HeaderPage, DzenPage
 from pages.main_page import MainPage
 from pages.order_page import OrderPage

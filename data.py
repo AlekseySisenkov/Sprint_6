@@ -1,7 +1,6 @@
 import secrets
 
 MAIN_PAGE_REF = 'https://qa-scooter.praktikum-services.ru/'
-DZEN_PAGE_REF = 'https://dzen.ru/?yredirect=true'
 alphabet = ''.join(chr(1072 + i) for i in range(32))
 NAME_AND_FAMILY = ''.join(secrets.choice(alphabet) for n in range(2))
 ADDRESS = ''.join(secrets.choice(alphabet) for a in range(5))

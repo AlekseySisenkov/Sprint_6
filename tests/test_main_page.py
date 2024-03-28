@@ -1,3 +1,4 @@
+import allure
 import pytest
 
 from data import Answer
@@ -16,8 +17,9 @@ class TestMainPage:
             (6, Answer.TO_QUESTION_6),
             (7, Answer.TO_QUESTION_7)
         ])
+    @allure.title('Проверка ответов на вопросы')
     def test_questions(self, main_page, num, expected):
-        main_page.click_element(MainPageLocators.COOKIE)
-        main_page.skrooll_to_element(MainPageLocators.DOWN_MAIN_PAGE)
-        result = main_page.click_question_get_answer(MainPageLocators.QUESTION, MainPageLocators.ANSWER, num)
+        main_page.close_cookie()
+        main_page.skrooll_to_down()
+        result = main_page.click_question_get_answer(num)
         assert main_page.check_answer(result, expected)
